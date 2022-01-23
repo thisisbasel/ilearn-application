@@ -1,0 +1,128 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    <!-- <script src="./build/sigma.min.js"></script> -->
+    <script src="{{ url_for('static', filename="build/sigma.min.js") }}"></script>
+
+    <style>
+      html { height:100%;}
+      body { height: 100%;}
+      #sigma-container { width:100%; height:50%; background-color:#E1E1E1}
+
+
+      .float-container {
+         padding: 20px;
+          }
+
+        .float-child {
+            width: 50%;
+            float: right;
+            padding: 20px;
+        }
+
+        .grid-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 20px;
+    </style>
+
+    <p style="text-align: center; color: blue;">I want to learn about climate change to be a more informed citizen</p>
+{% endblock %}
+
+
+{% block body %}
+   
+
+    <div class="grid-container">
+
+      <div class="grid-child">
+        <img src="{{ url_for('static', filename='images/climateChange_knowledgeGraph.png')}}"
+        width="1200"
+        height="105%" />
+      </div>
+  
+  
+
+    <!-- <div id='sigma-container'></div>
+    <script>
+      // Initialize sigma:
+      var s = new sigma(
+        {
+           renderer: {
+             container: document.getElementById('sigma-container'),
+             type: 'canvas'
+           },
+           settings: {
+            edgeLabelSize: 'proportional',
+            labelThreshold: 0
+
+           }
+         }
+       );
+
+        // Create a graph object
+        var graph = {
+          nodes: [
+            { id: "n0", label: "CLIMATE CHANGE", x: 0, y: 0, size: 100, color: '#008cc2' },
+            { id: "n1", label: "Climate change adaptation", x: -2, y: 0.5, size: 25, color: '#E57821' },
+            { id: "n2", label: "Climate change and society", x: 0, y: -1.2, size: 25, color: '#E57821' },
+            { id: "n3", label: "Climate change and the environment", x: -1, y:1, size: 25, color: '#E57821' }, 
+            { id: "n4", label: "Climate change assessment and attribution", x: 1, y: -1, size: 25, color: '#E57821' }, 
+            { id: "n5", label: "Climate change by country and region", x: 2, y: 0.5, size: 25, color: '#E57821' },
+            { id: "n6", label: "Climate change feedbacks", x: 2, y: -0.5, size: 25, color: '#E57821' },
+            { id: "n7", label: "Climate change mitigation", x: 2, y: 0.7, size: 25, color: '#E57821' }, 
+            { id: "n8", label: "Greenhouse gases", x: 2, y: -0.7, size: 25, color: '#E57821' }, 
+            { id: "n9", label: "Sustainable Development Goal", x: -2, y: 0.8, size: 25, color: '#E57821' }
+          ],
+          edges: [
+            { id: "e0", source: "n0", target: "n1", color: '#282c34', type:'line', size:1 },
+            { id: "e1", source: "n0", target: "n2", color: '#282c34', type:'curve', size:1}, 
+            { id: "e2", source: "n0", target: "n3", color: '#282c34', type:'curve', size:1}, 
+            { id: "e3", source: "n0", target: "n4", color: '#282c34', type:'curve', size:1}, 
+            { id: "e4", source: "n0", target: "n5", color: '#282c34', type:'curve', size:1},
+            { id: "e5", source: "n0", target: "n6", color: '#282c34', type:'curve', size:1},
+            { id: "e6", source: "n0", target: "n7", color: '#282c34', type:'curve', size:1},
+            { id: "e7", source: "n0", target: "n8", color: '#282c34', type:'curve', size:1},
+            { id: "e8", source: "n0", target: "n9", color: '#282c34', type:'curve', size:1}
+          ]
+        }
+
+        // Load the graph in sigma
+        s.graph.read(graph);
+        // Ask sigma to draw it
+        s.refresh();
+    </script> -->
+    <div class="grid-child">
+      <h2>Explore Concepts</h2>
+      <h4>Click a topic below to learn more about it (will open in new tab)</h4>
+      <h4>As you explore information on the internet through these link, return to the app and check the applicable boxes</h4>
+      
+      
+        <p>Box 1: I understand the topic</p>
+        <p>Box 2: I need to review this topic</p>
+        <p>Box 3: This topic is really confusing to me</p>
+        <p>Box 4: This topic is irrelvant / not interesting to me</p>
+    
+
+      <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Climate+change+adaptation" target="_blank" rel="noopener noreferrer">Climate change adaptation</a><br>
+      <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Climate+change+and+society" target="_blank" rel="noopener noreferrer">Climate change and society</a><br>
+      <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Climate+change+and+the+environment" target="_blank" rel="noopener noreferrer">Climate change and the environment</a><br>
+      <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Climate+change+assessment+and+attribution" target="_blank" rel="noopener noreferrer">Climate change assessment and attribution</a><br>
+      <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Climate+change+by+country+and+region" target="_blank" rel="noopener noreferrer">Climate change by country and region</a><br>
+      <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Climate+change+feedbacks" target="_blank" rel="noopener noreferrer">Climate change feedbacks</a><br>
+      <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Climate+change+mitigation" target="_blank" rel="noopener noreferrer">Climate change mitigation</a><br>
+      <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Greenhouse+gases" target="_blank" rel="noopener noreferrer">Greenhouse gases</a><br>
+      <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Sustainable+Development+Goal" target="_blank" rel="noopener noreferrer">Sustainable Development Goal</a><br>
+
+      <h3>If you find new, interesting links, add them below!</h3>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><form><input type="text"></form>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><form><input type="text"></form>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><form><input type="text"></form>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><form><input type="text"></form>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><form><input type="text"></form>
+      
+    </div>
+    </div>
+
+     
+{% endblock %}

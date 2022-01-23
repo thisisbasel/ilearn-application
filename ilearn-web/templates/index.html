@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+
+
+    <p style="text-align: center; color: blue;">Define your Goal. I want to learn...</p>
+    <form style="text-align: center; color: blue;">
+        <input type="text">
+        </form>f
+
+    <style>
+        .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  </style>
+    {% endblock %}
+
+
+
+{% block body %}
+
+    <div style="text-align: center;">
+    <a class="button" href="{{ url_for('climatechange') }}">Climate Change</a><br>
+    <br>
+    <br>
+    <a class="button" href="{{ url_for('personalfinance') }}">Personal Finance</a><br>
+    <br>
+    <br>
+    <a class="button" href="{{ url_for('ai') }}">AI</a><br>
+    </div>
+{% endblock %}

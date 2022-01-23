@@ -1,0 +1,219 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    <!-- <script src="./build/sigma.min.js"></script> -->
+    <script src="{{ url_for('static', filename="build/sigma.min.js") }}"></script>
+
+    <style>
+      html { height:100%;}
+      body { height: 100%;}
+      #sigma-container { width:100%; height:95%; background-color:#E1E1E1; align-items: center;}
+
+      .float-container {
+         padding: 20px;
+          }
+
+        .float-child {
+            width: 50%;
+            float: right;
+            padding: 20px;
+        }
+
+        .grid-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 20px;
+    </style>
+    <p style="text-align: center; color: blue;">I want to learn about Machine Learning to become a researcher</p>
+
+    <a style="text-align: center; style="color: red;" href="{{ url_for('ai') }}"> (<-- Back to AI)</a><br>
+{% endblock %}
+
+
+{% block body %}
+
+    <div class="grid-container">
+
+      <div class="grid-child">
+        <img src="{{ url_for('static', filename='images/ml_knowledgeGraph.png')}}"
+        width="1200"
+        height="90%" />
+      </div>
+
+    <div class="grid-child">
+      <h2>Explore Concepts</h2>
+      
+      <h4>Click a topic below to learn more about it (will open in new tab)</h4>
+
+      <h4>As you explore information on the internet through these link, return to the app and check the applicable boxes</h4>
+      
+      
+        <p>Box 1: I understand the topic</p>
+        <p>Box 2: I need to review this topic</p>
+        <p>Box 3: This topic is really confusing to me</p>
+        <p>Box 4: This topic is irrelvant / not interesting to me</p>
+
+
+  
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Applied+machine+learning" target="_blank" rel="noopener noreferrer">Applied machine learning</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Artificial+intelligence+conferences" target="_blank" rel="noopener noreferrer">Artificial intelligence conferences</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Artificial+neural+networks" target="_blank" rel="noopener noreferrer">Artificial neural networks</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Bayesian+networks" target="_blank" rel="noopener noreferrer">Bayesian networks</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Classification+algorithms" target="_blank" rel="noopener noreferrer">Classification algorithms</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Cluster+analysis" target="_blank" rel="noopener noreferrer">Cluster analysis</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Computational+learning+theory" target="_blank" rel="noopener noreferrer">Computational learning theory</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Data+mining+and+machine+learning+software" target="_blank" rel="noopener noreferrer">Data mining and machine learning software</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Datasets+in+machine+learning" target="_blank" rel="noopener noreferrer">Datasets in machine learning</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Deep+learning" target="_blank" rel="noopener noreferrer">Deep Learning</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Dimension+reduction" target="_blank" rel="noopener noreferrer">Dimension reduction</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Ensemble+learning" target="_blank" rel="noopener noreferrer">Ensemble learning</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Evolutionary+algorithms" target="_blank" rel="noopener noreferrer">Evolutionary algorithms</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Genetic+programming" target="_blank" rel="noopener noreferrer">Genetic programming</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Inductive+logic+programming" target="_blank" rel="noopener noreferrer">Inductive logic programming</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Kernel+methods+for+machine+learning" target="_blank" rel="noopener noreferrer">Kernel methods for machine learning</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Latent+variable+models" target="_blank" rel="noopener noreferrer">Latent variable models</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Learning+in+computer+vision" target="_blank" rel="noopener noreferrer">Learning in computer vision</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Log-linear+models" target="_blank" rel="noopener noreferrer">Log-linear models</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Loss+functions" target="_blank" rel="noopener noreferrer">Loss functions</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Machine+learning+algorithms" target="_blank" rel="noopener noreferrer">Machine learning algorithms</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Machine+learning+researchers" target="_blank" rel="noopener noreferrer">Machine learning researchers</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Machine+learning+task" target="_blank" rel="noopener noreferrer">Machine learning task</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Markov+models" target="_blank" rel="noopener noreferrer">Markov models</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Reinforcement+learning" target="_blank" rel="noopener noreferrer">Reinforcement learning</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Semisupervised+learning" target="_blank" rel="noopener noreferrer">Semisupervised learning</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Signal+processing+conferences" target="_blank" rel="noopener noreferrer">Signal processing conferences</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Statistical+natural+language+processing" target="_blank" rel="noopener noreferrer">Statistical natural language processing</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Structured+prediction" target="_blank" rel="noopener noreferrer">Structured prediction</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Supervised+learning" target="_blank" rel="noopener noreferrer">Supervised learning</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Support+vector+machines" target="_blank" rel="noopener noreferrer">Support vector machines</a><br>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Unsupervised+learning" target="_blank" rel="noopener noreferrer">Unsupervised learning</a><br>
+
+        <h3>If you find new, interesting links, add them below!</h3>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><form><input type="text"></form>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><form><input type="text"></form>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><form><input type="text"></form>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><form><input type="text"></form>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><form><input type="text"></form>
+      
+    </div>
+
+    </div>
+
+      <!-- <div id='sigma-container'></div> -->
+      <!-- <script>
+        // Initialize sigma:
+        var s = new sigma(
+          {
+            renderer: {
+              container: document.getElementById('sigma-container'),
+              type: 'canvas'
+            },
+            settings: {
+              edgeLabelSize: 'proportional',
+              labelThreshold: 0
+
+            }
+          }
+      ); -->
+
+    <!-- //     // Create a graph object
+    //     var graph = {
+    //       nodes: [
+    //         { id: "n0", label: "AI", x: 0, y: 0, size: 500, color: '#008cc2' },
+    //         { id: "n1", label: "AI accelerators", x: 0.4, y: 0.4, size: 25, color: '#E57821' },
+    //         { id: "n2", label: "Affective computing", x: 0.8, y: 0.3, size: 25, color: '#E57821' },
+    //         { id: "n3", label: "Argument technology", x: 1.2, y: 0.2, size: 25, color: '#E57821' },
+    //         { id: "n4", label: "Artificial immune systems", x: 1.6, y: 0.1, size: 25, color: '#E57821' },
+
+    //         { id: "n5", label: "Artificial intelligence applications", x: 0.4, y: -0.4, size: 25, color: '#E57821' },
+    //         { id: "n6", label: "Artificial intelligence associations", x: 0.8, y: -0.3, size: 25, color: '#E57821' },
+    //         { id: "n7", label: "Artificial intelligence conferences", x: 1.2, y: -0.2, size: 25, color: '#E57821' },
+    //         { id: "n8", label: "Artificial intelligence in fiction", x: 1.6, y: -0.1, size: 25, color: '#E57821' },
+
+    //         { id: "n9", label: "Artificial intelligence laboratories", x: 0.3, y: 0.8, size: 25, color: '#E57821' },
+    //         { id: "n10", label: "Artificial intelligence publications", x: 0.6, y: 0.7, size: 25, color: '#E57821' },
+    //         { id: "n11", label: "Artificial intelligence researchers", x: 0.9, y: 0.6, size: 25, color: '#E57821' },
+    //         { id: "n12", label: "Automated reasoning", x: 1.4, y: 0.5, size: 25, color: '#E57821' },
+
+    //         { id: "n13", label: "Chatbots", x: 0.3, y: -0.8, size: 25, color: '#E57821' },
+    //         { id: "n14", label: "Cloud robotics", x: 0.6, y: -0.7, size: 25, color: '#E57821' },
+    //         { id: "n15", label: "Cognitive architecture", x: 0.9, y: -0.6, size: 25, color: '#E57821' },
+    //         { id: "n16", label: "Computer vision", x: 1.4, y: -0.5, size: 25, color: '#E57821' },
+
+    //         { id: "n17", label: "Evolutionary computation", x: -0.4, y: 0.4, size: 25, color: '#E57821' },
+    //         { id: "n18", label: "Existential risk from artificial general intelligence", x: -0.8, y: 0.3, size: 25, color: '#E57821' },
+    //         { id: "n19", label: "Fictional artificial intelligences", x: -1.2, y: 0.2, size: 25, color: '#E57821' },
+    //         { id: "n20", label: "Fuzzy logic", x: -1.6, y: 0.1, size: 25, color: '#E57821' },
+
+    //         { id: "n21", label: "Game artificial intelligence", x: -0.4, y: 0.8, size: 25, color: '#E57821' },
+    //         { id: "n22", label: "History of artificial intelligence", x: -0.8, y: 0.7, size: 25, color: '#E57821' },
+    //         { id: "n23", label: "Knowledge engineering", x: -1.2, y: 0.6, size: 25, color: '#E57821' },
+    //         { id: "n24", label: "Knowledge representation", x: -1.6, y: 0.5, size: 25, color: '#E57821' },
+
+    //         { id: "n25", label: "Logic programming", x: -0.3, y: -0.8, size: 25, color: '#E57821' },
+    //         { id: "n26", label: "Machine learning", x: -0.6, y: -0.7, size: 25, color: '#E57821' },
+    //         { id: "n27", label: "Multi-agent systems", x: -0.9, y: -0.6, size: 25, color: '#E57821' },
+    //         { id: "n28", label: "Neural network data exchange formats", x: -1.4, y: -0.5, size: 25, color: '#E57821' },
+
+    //         { id: "n29", label: "Open-source artificial intelligence", x: -0.3, y: -0.4, size: 25, color: '#E57821' },
+    //         { id: "n30", label: "Philosophy of artificial intelligence", x: -0.6, y: -0.3, size: 25, color: '#E57821' },
+    //         { id: "n31", label: "Robotics", x: -0.9, y: -0.2, size: 25, color: '#E57821' },
+    //         { id: "n32", label: "Robots", x: -1.4, y: -0.1, size: 25, color: '#E57821' },
+
+    //         { id: "n33", label: "Rule engines", x: 1, y: 0, size: 25, color: '#E57821' },
+    //         { id: "n34", label: "Signal processing conferences", x: 0, y: 1, size: 25, color: '#E57821' },
+    //         { id: "n35", label: "Turing tests", x: 0, y: -1, size: 25, color: '#E57821' },
+    //         { id: "n36", label: "Virtual assistants", x: -1, y: 0, size: 25, color: '#E57821' }
+
+            
+            
+    //       ],
+    //       edges: [
+    //         { id: "e0", source: "n0", target: "n1", color: '#282c34', type:'line', size:1 },
+    //         { id: "e1", source: "n0", target: "n2", color: '#282c34', type:'line', size:1 },
+    //         { id: "e2", source: "n0", target: "n3", color: '#282c34', type:'line', size:1 },
+    //         { id: "e3", source: "n0", target: "n4", color: '#282c34', type:'line', size:1 },
+    //         { id: "e4", source: "n0", target: "n5", color: '#282c34', type:'line', size:1 },
+    //         { id: "e5", source: "n0", target: "n6", color: '#282c34', type:'line', size:1 },
+    //         { id: "e6", source: "n0", target: "n7", color: '#282c34', type:'line', size:1 },
+    //         { id: "e7", source: "n0", target: "n8", color: '#282c34', type:'line', size:1 },
+    //         { id: "e8", source: "n0", target: "n9", color: '#282c34', type:'line', size:1 },
+    //         { id: "e9", source: "n0", target: "n10", color: '#282c34', type:'line', size:1 },
+    //         { id: "e10", source: "n0", target: "n11", color: '#282c34', type:'line', size:1 },
+    //         { id: "e11", source: "n0", target: "n12", color: '#282c34', type:'line', size:1 },
+    //         { id: "e12", source: "n0", target: "n13", color: '#282c34', type:'line', size:1 },
+    //         { id: "e13", source: "n0", target: "n14", color: '#282c34', type:'line', size:1 },
+    //         { id: "e14", source: "n0", target: "n15", color: '#282c34', type:'line', size:1 },
+    //         { id: "e15", source: "n0", target: "n16", color: '#282c34', type:'line', size:1 },
+    //         { id: "e16", source: "n0", target: "n17", color: '#282c34', type:'line', size:1 },
+    //         { id: "e17", source: "n0", target: "n18", color: '#282c34', type:'line', size:1 },
+    //         { id: "e18", source: "n0", target: "n19", color: '#282c34', type:'line', size:1 },
+    //         { id: "e19", source: "n0", target: "n20", color: '#282c34', type:'line', size:1 },
+    //         { id: "e20", source: "n0", target: "n21", color: '#282c34', type:'line', size:1 },
+    //         { id: "e21", source: "n0", target: "n22", color: '#282c34', type:'line', size:1 },
+    //         { id: "e22", source: "n0", target: "n23", color: '#282c34', type:'line', size:1 },
+    //         { id: "e23", source: "n0", target: "n24", color: '#282c34', type:'line', size:1 },
+    //         { id: "e24", source: "n0", target: "n25", color: '#282c34', type:'line', size:1 },
+    //         { id: "e25", source: "n0", target: "n26", color: '#282c34', type:'line', size:1 },
+    //         { id: "e26", source: "n0", target: "n27", color: '#282c34', type:'line', size:1 },
+    //         { id: "e27", source: "n0", target: "n28", color: '#282c34', type:'line', size:1 },
+    //         { id: "e28", source: "n0", target: "n29", color: '#282c34', type:'line', size:1 },
+    //         { id: "e29", source: "n0", target: "n30", color: '#282c34', type:'line', size:1 },
+    //         { id: "e30", source: "n0", target: "n31", color: '#282c34', type:'line', size:1 },
+    //         { id: "e31", source: "n0", target: "n32", color: '#282c34', type:'line', size:1 },
+    //         { id: "e32", source: "n0", target: "n33", color: '#282c34', type:'line', size:1 },
+    //         { id: "e33", source: "n0", target: "n34", color: '#282c34', type:'line', size:1 },
+    //         { id: "e34", source: "n0", target: "n35", color: '#282c34', type:'line', size:1 },
+    //         { id: "e35", source: "n0", target: "n36", color: '#282c34', type:'line', size:1 }
+    //       ] -->
+    <!-- //     }
+
+    //     // Load the graph in sigma
+    //     s.graph.read(graph);
+    //     // Ask sigma to draw it
+    //     s.refresh(); -->
+    <!-- // </script> -->
+    
+
+     
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    <!-- <script src="./build/sigma.min.js"></script> -->
+    <script src="{{ url_for('static', filename="build/sigma.min.js") }}"></script>
+
+    <style>
+      html { height:100%;}
+      body { height: 100%;}
+      #sigma-container { width:100%; height:50%; background-color:#E1E1E1}
+         
+      
+      .float-container {
+        padding: 20px;
+         }
+
+       .float-child {
+           width: 50%;
+           float: right;
+           padding: 20px;
+       }
+
+       .grid-container {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         grid-gap: 20px;
+    </style>
+
+    <p style="text-align: center;  color: blue;">I want to learn personal finance to be better at managing money</p>
+    
+   
+{% endblock %}
+
+
+{% block body %}
+    
+
+    <div class="grid-container">
+
+    <div class="grid-child">
+      <img src="{{ url_for('static', filename='images/personalFinance_knowledgeGraph.png')}}"
+      width="1200"
+      height="105%" />
+    </div>
+
+
+    <div class="grid-child">
+      <h2>Explore Concepts</h2>
+      <h4>Click a topic below to learn more about it (will open in new tab)</h4>
+      <h4>As you explore information on the internet through these link, return to the app and check the applicable boxes</h4>
+      
+      
+        <p>Box 1: I understand the topic</p>
+        <p>Box 2: I need to review this topic</p>
+        <p>Box 3: This topic is really confusing to me</p>
+        <p>Box 4: This topic is irrelvant / not interesting to me</p>
+    
+      <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Finance+websites" target="_blank" rel="noopener noreferrer">Finance websites</a><br>
+      <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Household+income" target="_blank" rel="noopener noreferrer">Household income</a><br>
+      <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Informal+finance" target="_blank" rel="noopener noreferrer">Informal finance</a><br>
+      <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Life+insurance" target="_blank" rel="noopener noreferrer">Life insurance</a><br>
+      <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Mortgage" target="_blank" rel="noopener noreferrer">Mortgage</a><br>
+      <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Personal+finance+education" target="_blank" rel="noopener noreferrer">Personal finance education</a><br>
+      <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Personal+financial+problems" target="_blank" rel="noopener noreferrer">Personal financial problems</a><br>
+      <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Personal+taxes" target="_blank" rel="noopener noreferrer">Personal taxes</a><br>
+      <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Retail+financial+services" target="_blank" rel="noopener noreferrer">Retail financial services</a><br>
+      <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Retirement" target="_blank" rel="noopener noreferrer">Retirement</a><br>
+      <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><a href="https://www.google.com/search?q=Tax-advantaged+savings+plans" target="_blank" rel="noopener noreferrer">Tax-advantaged savings plans</a><br>
+
+      <h3>If you find new, interesting links, add them below!</h3>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><form><input type="text"></form>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><form><input type="text"></form>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><form><input type="text"></form>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><form><input type="text"></form>
+        <input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><input type="checkbox" value=""><form><input type="text"></form>
+      
+    </div>
+    </div>
+    
+
+     
+{% endblock %}
